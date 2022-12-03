@@ -23,9 +23,12 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 	#include <stdlib.h>
+	#include<stdio.h>
 	#include "../../../Drivers/BSP/STM32F411E-Discovery/stm32f411e_discovery.h"
 	#include "../../../Drivers/BSP/STM32F411E-Discovery/stm32f411e_discovery_gyroscope.h"
 	#include "../../../Drivers/BSP/Components/l3gd20/l3gd20.h"
+	#include "ssd1306.h"
+	#include "fonts.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -97,10 +100,18 @@ int main(void)
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
   	  BSP_GYRO_Init();
+  	  ssd1306_Init(&hi2c1);
+
   	  float axis[3];
   	  float xAxis, yAxis = 0.0f;
   	  float axisTreshold = 10000.0f;
   	  uint32_t delayMs = 500;
+
+  	  float xAxisDisplay = 0.0f;
+  	  float yAxisDisplay = 0.0f;
+
+  	  char xText[16];
+  	  char yText[16];
 
   	  void turnOnLed(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
   	  {
@@ -126,8 +137,13 @@ int main(void)
     /* USER CODE BEGIN 3 */
 	  BSP_GYRO_GetXYZ(axis);
 
+	  ssd1306_Fill(Black);
+
 	  	xAxis = abs((axis[0]));
 	  	yAxis = abs((axis[1]));
+
+	  	xAxisDisplay += axis[0] / 100000.0f;
+	  	yAxisDisplay += axis[1] / 100000.0f;
 
 	  	if(xAxis > yAxis)
 	  	{
@@ -150,6 +166,16 @@ int main(void)
 
 	  	  else { HAL_Delay(delayMs); }
 	  	}
+
+	  	ssd1306_SetCursor(10, 10);
+	  	sprintf(xText, "x: %.2f", xAxisDisplay);
+		ssd1306_WriteString(xText, Font_11x18, White);
+
+	  	ssd1306_SetCursor(10, 40);
+	  	sprintf(yText, "y: %.2f", yAxisDisplay);
+	  	ssd1306_WriteString(yText, Font_11x18, White);
+
+	  	ssd1306_UpdateScreen(&hi2c1);
 
 	  	turnOfLEDS();
   }

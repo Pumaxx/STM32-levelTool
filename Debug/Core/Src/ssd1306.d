@@ -1,4 +1,4 @@
-Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
+Core/Src/ssd1306.o: ../Core/Src/ssd1306.c ../Core/Inc/ssd1306.h \
  C:/Users/Rafal/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.2/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  C:/Users/Rafal/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.2/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -27,17 +27,9 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  C:/Users/Rafal/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.2/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
  C:/Users/Rafal/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.2/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  C:/Users/Rafal/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.2/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
- c:\users\rafal\stm32cube\repository\stm32cube_fw_f4_v1.26.2\drivers\bsp\stm32f411e-discovery\stm32f411e_discovery.h \
- c:\users\rafal\stm32cube\repository\stm32cube_fw_f4_v1.26.2\drivers\bsp\stm32f411e-discovery\stm32f411e_discovery_gyroscope.h \
- c:\users\rafal\stm32cube\repository\stm32cube_fw_f4_v1.26.2\drivers\bsp\stm32f411e-discovery\stm32f411e_discovery.h \
- c:\users\rafal\stm32cube\repository\stm32cube_fw_f4_v1.26.2\drivers\bsp\components\l3gd20\l3gd20.h \
- c:\users\rafal\stm32cube\repository\stm32cube_fw_f4_v1.26.2\drivers\bsp\components\common\gyro.h \
- c:\users\rafal\stm32cube\repository\stm32cube_fw_f4_v1.26.2\drivers\bsp\components\i3g4250d\i3g4250d.h \
- c:\users\rafal\stm32cube\repository\stm32cube_fw_f4_v1.26.2\drivers\bsp\components\common\gyro.h \
- c:\users\rafal\stm32cube\repository\stm32cube_fw_f4_v1.26.2\drivers\bsp\components\l3gd20\l3gd20.h \
- ../Core/Inc/ssd1306.h ../Core/Inc/fonts.h ../Core/Inc/fonts.h
+ ../Core/Inc/fonts.h
 
-../Core/Inc/main.h:
+../Core/Inc/ssd1306.h:
 
 C:/Users/Rafal/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.2/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 
@@ -94,25 +86,5 @@ C:/Users/Rafal/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.2/Drivers/STM32F4xx_HA
 C:/Users/Rafal/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.2/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
 
 C:/Users/Rafal/STM32Cube/Repository/STM32Cube_FW_F4_V1.26.2/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h:
-
-c:\users\rafal\stm32cube\repository\stm32cube_fw_f4_v1.26.2\drivers\bsp\stm32f411e-discovery\stm32f411e_discovery.h:
-
-c:\users\rafal\stm32cube\repository\stm32cube_fw_f4_v1.26.2\drivers\bsp\stm32f411e-discovery\stm32f411e_discovery_gyroscope.h:
-
-c:\users\rafal\stm32cube\repository\stm32cube_fw_f4_v1.26.2\drivers\bsp\stm32f411e-discovery\stm32f411e_discovery.h:
-
-c:\users\rafal\stm32cube\repository\stm32cube_fw_f4_v1.26.2\drivers\bsp\components\l3gd20\l3gd20.h:
-
-c:\users\rafal\stm32cube\repository\stm32cube_fw_f4_v1.26.2\drivers\bsp\components\common\gyro.h:
-
-c:\users\rafal\stm32cube\repository\stm32cube_fw_f4_v1.26.2\drivers\bsp\components\i3g4250d\i3g4250d.h:
-
-c:\users\rafal\stm32cube\repository\stm32cube_fw_f4_v1.26.2\drivers\bsp\components\common\gyro.h:
-
-c:\users\rafal\stm32cube\repository\stm32cube_fw_f4_v1.26.2\drivers\bsp\components\l3gd20\l3gd20.h:
-
-../Core/Inc/ssd1306.h:
-
-../Core/Inc/fonts.h:
 
 ../Core/Inc/fonts.h:
